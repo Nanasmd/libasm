@@ -27,7 +27,7 @@ void test_ft_strcpy(void) {
     char buffer2[100];
     
     for (int i = 0; i < 4; i++) {
-        char *lib_result = strcpy(buffer1, tests[i]);
+        strcpy(buffer1, tests[i]);
         char *ft_result = ft_strcpy(buffer2, tests[i]);
         
         printf("Test %d: \"%s\"\n", i + 1, tests[i]);
@@ -38,7 +38,6 @@ void test_ft_strcpy(void) {
                (buffer2 == ft_result) ? "OK" : "KO");
     }
 }
-
 void test_ft_strcmp(void) {
     printf("\n===== Testing ft_strcmp =====\n");
     struct {
